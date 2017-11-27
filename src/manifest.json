@@ -3,7 +3,10 @@
 
   "name": "Motivate Me",
   "description": "Adds a motivational quote under website headings",
-  "version": "1.0.1",
+  "version": "1.0.2",
+
+  "default_locale": "en",
+  "author": "Thomas Coleman <tomc2k3@googlemail.com>",
 
   "permissions": [
     "activeTab",
