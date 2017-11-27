@@ -5,16 +5,6 @@ import { QuoteFetcherService, IQuote } from './quote-fetcher.service';
 export class QuoteInjectorService {
   constructor() {
     /*tslint:disable*/
-    window['chrome'].tabs.executeScript(null, {
-      code: `(function () {
-        //document.querySelectorAll('h1').forEach((heading) => { heading.innerText = 'blah'; });
-      })()`,
-      runAt: 'document_start'
-    }, () => {
-      console.log('installed');
-    });
-
-    console.log(window['chrome']);
     window['chrome'].tabs.onCreated.addListener(function(tab) {
       const quote: IQuote = QuoteFetcherService.getQuote();
 
@@ -29,7 +19,7 @@ export class QuoteInjectorService {
               quoteParagraph.innerText = '${quote.quote}';
               authorCite.innerText = '${quote.author}';
 
-              blockQuoteFooter.innerText = ' - ';
+              blockQuoteFooter.innerText = '- ';
               blockQuoteFooter.appendChild(authorCite);
 
               blockquote.appendChild(quoteParagraph);
@@ -40,8 +30,6 @@ export class QuoteInjectorService {
           })()`,
         });
     });
-
-    console.log('tab run');
     /*tslint:enable*/
   }
 }

@@ -6,9 +6,6 @@
   "description": "Adds a motivational quote under website headings",
   "version": "1.0",
 
-  // "browser_action": {
-  //   "default_popup": "index.html"
-  // },
   "permissions": [
     "activeTab",
     "tabs",
@@ -17,8 +14,10 @@
     "https://*/*"
   ],
 
-  "chrome_url_overrides" : {
-    "newtab": "index.html"
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+   "128": "assets/icon128.png"
   },
 
   "background": {
