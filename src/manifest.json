@@ -1,10 +1,9 @@
-
 {
   "manifest_version": 2,
 
   "name": "Motivate Me",
   "description": "Adds a motivational quote under website headings",
-  "version": "1.0",
+  "version": "1.0.1",
 
   "permissions": [
     "activeTab",
