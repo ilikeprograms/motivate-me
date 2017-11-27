@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { QuoteInjectorService } from './quote-injector.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  constructor(private quoteInjectorService: QuoteInjectorService) {
+
+  }
 }
